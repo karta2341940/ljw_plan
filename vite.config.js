@@ -14,6 +14,9 @@ export default defineConfig({
         }),
     ],
     "publicDir": 'assets',
+    "build":{
+        "outDir":"../dist"
+    },
     "server": {
         "port": 3000,
     },
