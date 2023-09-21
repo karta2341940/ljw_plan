@@ -1,5 +1,7 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router';
+import { ref } from 'vue';
+const tab = ref(0);
 </script>
 
 <template>
@@ -12,15 +14,24 @@ import { RouterView, RouterLink } from 'vue-router';
                 <v-toolbar-title>屏東食品產業數位轉型平台</v-toolbar-title>
 
                 <v-spacer></v-spacer>
-                <v-btn>
-                    <RouterLink to="/">計畫目標</RouterLink>
-                </v-btn>
-                <v-btn>
-                    <RouterLink to="/introduction">實施策略及方法</RouterLink>
-                </v-btn>
-                <v-btn>
-                    <RouterLink to="/methodAndStrategy">食品產業上中下游介紹</RouterLink>
-                </v-btn>
+                <v-tabs v-model="tab" :color="'black'">
+                    <RouterLink to="/">
+                        <v-tab :value="0">
+                            計畫目標
+                        </v-tab>
+                    </RouterLink>
+                    <RouterLink to="/introduction">
+                        <v-tab :value="1">
+                            實施策略及方法
+                        </v-tab>
+                    </RouterLink>
+                    <RouterLink to="/methodAndStrategy">
+                        <v-tab :value="2">
+                            食品產業上中下游介紹
+                        </v-tab>
+                    </RouterLink>
+                </v-tabs>
+
             </v-toolbar>
 
             <RouterView></RouterView>
@@ -28,4 +39,6 @@ import { RouterView, RouterLink } from 'vue-router';
     </v-app>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>
