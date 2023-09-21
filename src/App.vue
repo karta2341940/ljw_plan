@@ -13,7 +13,13 @@ import { RouterView, RouterLink } from 'vue-router';
 
                 <v-spacer></v-spacer>
                 <v-btn>
-                    <RouterLink to="/">Go Home</RouterLink>
+                    <RouterLink to="/">計畫目標</RouterLink>
+                </v-btn>
+                <v-btn>
+                    <RouterLink to="/introduction">實施策略及方法</RouterLink>
+                </v-btn>
+                <v-btn>
+                    <RouterLink to="/methodAndStrategy">食品產業上中下游介紹</RouterLink>
                 </v-btn>
             </v-toolbar>
 

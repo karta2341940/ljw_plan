@@ -9,3 +9,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
     background-color: rgb(185, 185, 185);
 }
+a{
+    text-decoration: none;
+    font-size: medium;
+}
