@@ -30,6 +30,11 @@ const tab = ref(0);
                             食品產業上中下游介紹
                         </v-tab>
                     </RouterLink>
+                    <RouterLink to="/result">
+                        <v-tab :value="3">
+                            成品展示
+                        </v-tab>
+                    </RouterLink>
                 </v-tabs>
 
             </v-toolbar>
