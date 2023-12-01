@@ -41,7 +41,7 @@
                 </ul>
             </v-col>
             <v-col cols="6" class="cols" align-self="center">
-                <v-img src="/img1.jpg"></v-img>
+                <v-img src="/root.jpg"></v-img>
             </v-col>
         </v-row>
     </v-container>

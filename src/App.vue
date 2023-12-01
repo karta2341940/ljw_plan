@@ -10,14 +10,17 @@ setTimeout(() => {
         case '/':
             tab.value = 0;
             break;
-        case '/introduction':
+        case '/methodAndStrategy':
             tab.value = 1;
             break;
-        case '/methodAndStrategy':
+        case '/introduction':
             tab.value = 2;
             break;
         case '/result':
             tab.value = 3;
+            break;
+        case '/dateShare':
+            tab.value = 4;
             break;
     }
 }, 50);
@@ -42,12 +45,12 @@ setTimeout(() => {
                             計畫目標
                         </v-tab>
                     </RouterLink>
-                    <RouterLink to="/introduction">
+                    <RouterLink to="/methodAndStrategy">
                         <v-tab :value="1">
                             實施策略及方法
                         </v-tab>
                     </RouterLink>
-                    <RouterLink to="/methodAndStrategy">
+                    <RouterLink to="/introduction">
                         <v-tab :value="2">
                             食品產業上中下游介紹
                         </v-tab>
@@ -55,6 +58,11 @@ setTimeout(() => {
                     <RouterLink to="/result">
                         <v-tab :value="3">
                             成品展示
+                        </v-tab>
+                    </RouterLink>
+                    <RouterLink to="/dateShare">
+                        <v-tab :value="4">
+                            活動資料分享
                         </v-tab>
                     </RouterLink>
                 </v-tabs>

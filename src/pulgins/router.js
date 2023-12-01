@@ -2,6 +2,7 @@ import defaultlayout from '@layout/default/index.vue'
 import introduction from '@layout/introduction/index.vue'
 import methodAndStrategy from '@layout/methodAndStrategy/index.vue'
 import result from '@layout/result/index.vue'
+import dataShare from '@layout/dataShare/index.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -20,6 +21,10 @@ const routes = [
     {
         path: '/result',
         component: result
+    },
+    {
+        path: '/dateShare',
+        component: dataShare
     }
 
 ]
