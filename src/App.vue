@@ -1,7 +1,27 @@
 <script setup>
-import { RouterView, RouterLink } from 'vue-router';
+import { RouterView, RouterLink, useRouter } from 'vue-router';
 import { ref } from 'vue';
+let router = useRouter();
+
 const tab = ref(0);
+
+setTimeout(() => {
+    switch (router.currentRoute.value.path) {
+        case '/':
+            tab.value = 0;
+            break;
+        case '/introduction':
+            tab.value = 1;
+            break;
+        case '/methodAndStrategy':
+            tab.value = 2;
+            break;
+        case '/result':
+            tab.value = 3;
+            break;
+    }
+}, 50);
+
 </script>
 
 <template>
@@ -11,7 +31,9 @@ const tab = ref(0);
             <v-toolbar>
 
 
-                <v-toolbar-title>屏東食品產業數位轉型平台</v-toolbar-title>
+                <v-toolbar-title>
+                    <RouterLink to="/" class="title">屏東食品產業數位轉型平台</RouterLink>
+                </v-toolbar-title>
 
                 <v-spacer></v-spacer>
                 <v-tabs v-model="tab" :color="'black'">
@@ -44,6 +66,4 @@ const tab = ref(0);
     </v-app>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
